@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta name="author" content="ern0" />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+		<script type="text/javascript" src="jquery.fontresize.js"></script>
+		<script language="javascript">
+			$.fontresize();
+		</script>	
+		
+	</head>
+<!-- CSS -------------------------------------------------------------->	
+	<style media="all" type="text/css">
+body {
+	background: #ffffff;
+	margin: 8px;
+	padding: 0;
+	border: none;
+	font-family: Sans-Serif;
+	font-size: 1.1em;
+}	
+body, p, h1, h2, code {
+	color: #442200;
+}
+em, code {
+	background: #eeeeee;
+	padding: 2px;
+	font-style: normal;
+	font-family: Monospace;
+	font-size: 1.1em;
+	border: 1px solid #dddddd;
+}
+h1 {
+	font-size: 32px;
+	color: #227788;
+	display: block;
+	text-indent: 0;
+	font-weight: bold;
+	margin: 0 0 8px 2px;
+}
+h2 {
+	font-size: 24px;
+	text-indent: 0;
+	font-weight: bold;
+	margin: 6px 0 4px 0;
+}
+p {
+	font-size: 14px;
+	text-indent: 4px;
+	margin: 0 0 8px 0;
+}
+p > i, p > b {
+	font-size: 14px;
+}
+code {
+	font-size: 14px;
+	display: block;
+	margin-left: 8px;
+	margin-top: 2px;
+	margin-bottom: 4px;
+	width: 90%;
+}
+.footer {
+	font-size: 12px;
+	border-top: 1px solid #cccccc;
+	color: #cccccc;
+	text-align: right;
+}
+	</style>	
+
+	
+<!-- HTML ------------------------------------------------------------->
+	<body>
+
+			
+		<h1>jQuery.FontResize</h1> 
+
+		<h2> What is it </h2>
+		<p>
+			This plugin calculates dynamic font sizes
+			according to actual <b>window width</b>.
+			When 
+			the user changes the window size
+			or rotates the device,
+			all font sizes will be recalculated,
+			so there's good chance
+			that your webpage will look
+			similar way in different sizes.
+		</p>
+		<p>
+			We can't promise that text flow
+			will be the very same,
+			but	there will be 
+			<i>no major changes</i> in text wrapping
+			-
+			the amount of text reflow
+			depends on 
+			text characteristics, 
+			and
+			font type used.
+			For example, this paragraph
+			is always fits in 3 lines.
+		</p>
+		<p>
+			Typical use case is documentations,
+			just like this page 
+			- 
+			let's try it, resize the window!
+		</p>
+		
+		<h2> How to use </h2>
+		<p>
+			Your original CSS font size definitions
+			will be applied at <b>800px</b> window width,
+			other window sizes occurs font resize.
+			Say, you defined the font for paragraphs as 16px,
+			so when the user stretches the window to 400px	width,
+			the paragraph font will be 8px big.
+			That's all.				
+		</p>
+		<p>
+			You may add following lines to the <i>head</i>
+			section of your HTML file:
+		</p>
+		<code>
+			&lt;script type="text/javascript" src="jquery.min.js" &gt;&lt;/script&gt; <br />
+			&lt;script type="text/javascript" src="jquery.fontresize.js"&gt;&lt;/script&gt; <br />
+			&lt;script language="javascript"&gt; <br />
+			&nbsp;&nbsp;$.fontresize(); <br />
+			&lt;/script&gt;	
+		</code>
+		<p>
+			Of course, don't include jQuery again, when you already using it.
+		</p>
+		<p>
+			If you are using other elements,
+			like tables or images,
+			it's recommended to declare relative sizes to them.
+			The hardest part is to choose
+			the original size for images, 
+			which will have no problems with stretching.
+		</p>
+
+		<h2> Issues </h2>
+		<p>
+			There should be problems with nested tags.
+			Explicit size declarations may help.
+		</p>                            
+		<code>
+			p > i, p > b { <br />
+			&nbsp;&nbsp;font-size: 14px; <br />
+			} <br />
+		</code>
+		
+		<h2> Caution </h2>
+		<p>
+			This plugin does not
+			replaces responsive web design techniques,
+			it is just a quick-and-dirty
+			way for make documentations look similar
+			on different screen sizes.
+		</p>
+
+		<p class="footer">
+			jquery.fontresize has brought to you by ern0 at linkbroker.hu
+		</p>
+			
+	</body>
+</html>
