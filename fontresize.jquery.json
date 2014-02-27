@@ -1,0 +1,29 @@
+{
+"name": "fontresize",
+"title": "jQuery FontResize",
+"description": "jQuery plugin which dynamically resizes fonts according to screen width change.",
+"keywords": [
+	"responsive",
+	"resolution",
+	"documentation"
+],
+"version": "1.0.0",
+"author": {
+	"name": "ern0",
+	"url": "http://linkbroker.hu/"
+},
+"licenses": [
+{
+"type": "MIT",
+"url": "https://github.com/jquery/jquery-color/blob/2.1.2/MIT-LICENSE.txt"
+}
+],
+"bugs": "https://github.com/ern0/jquery.fontresize/issues",
+"homepage": "https://github.com/ern0/jquery.fontresize",
+"demo": "http://linkbroker.hu/stuff/jquery.fontresize/",
+"docs": "https://github.com/ern0/jquery.fontresize/wiki",
+"download": "https://github.com/ern0/jquery.fontresize/archive/master.zip",
+"dependencies": {
+	"jquery": ">=1.5"
+}
+}
